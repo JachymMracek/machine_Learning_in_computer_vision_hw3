@@ -18,9 +18,11 @@ Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomoc
 Parametry modelu jsou vybrány právě pomocí grid search, jelikož jsou optimální pro naší úlohu.
 
 ## TASK 6
-Spuštěním evaluate uživatel dostane na standartím výstupu kovarianční matici,presion a recall ve formátu
+
+Spuštěním evaluate uživatel dostane na standartím výstupu kovarianční matici,presion a recall ve formátu:
+
 NaiveBayes
--------------
+
 [[254   0   0   0   0   0  46]
  [ 30 231   3  10   6   0  20]
  [208   9  34   0   0   0  49]
@@ -28,8 +30,11 @@ NaiveBayes
  [  0   0   5   4 291   0   0]
  [  0   0   0   0   0 300   0]
  [107   6   6   0   0   0 181]]
--------------
+
 precision: 0.7977634442156533
--------------
+
 recall: 0.75
+
 ![image](https://github.com/user-attachments/assets/5ec2a9df-2bda-42d2-9072-7fc58f66f10b)
+
+Uživatel také dostane výsledky modelů v presion-recall prostoru.
