@@ -13,8 +13,14 @@ Vybral jsem tři supervised metody -> rozhodovací stromy, neuronové sítě a g
 
 ### Výsledky grid search:
 #### DecisionTree_: {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
-#### MLPClassifier_: {'activation': 'tanh', 'alpha': 0.001, 'batch_size': 'auto', 'early_stopping': True, 'hidden_layer_sizes': (100,), 'learning_rate_init': 0.01, 'max_iter': 500, 'solver': 'adam'}
+#### MLPClassifier_: {'activation': 'tanh', 'alpha': 1e-05, 'early_stopping': False, 'hidden_layer_sizes': (150,), 'learning_rate_init': 0.001}
 #### GradientBoosting_: {'learning_rate': 0.1, 'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100, 'subsample': 0.8}
+
+### Pokud uživatel nechce grid search:
+#### DecisionTree_: {}
+#### MLPClassifier_: {'activation': 'tanh'}
+#### GradientBoosting_: {'max_depth': 5,'subsample': 0.8}
+
 
 ## TASK 4
 Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomocí elbow metody, kde ze získaných intertia jsem vypočítal vzdálenost od přímky náležící počátečnímu bodu a koncovému bodu grafu. Maximální vzdálenost bodu od naší přímky je náš elbow bod.
