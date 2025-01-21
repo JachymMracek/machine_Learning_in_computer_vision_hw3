@@ -3,16 +3,18 @@
 Seznamil jsem se s datasetem a využil attributy v kodu.
 
 ## TASK 2
-Provedl jsem analýzu příznaků a sestrojil graf závislosti rozptylu na počtu komponent a následně jsem zadrátoval nejlepší počet komponent do programu, aby ostatní volání funkcí proběhlo v pořádku. n_componets jsem zvolil na hodonotu 4, čímž proběhne feature selection a snížil
-jsem pomocí PCA dimenzi.
+Byla proveden analýza a pomocí PCA jsem redukoval dimenzi, čímž jsem provedli feature selection. Vykreslený graf závislosti rozptylu na n_components je:
 ![image](https://github.com/user-attachments/assets/a376c843-6cdd-47f2-8d75-4f989b9ab005)
 
+Optimální n_components = 4.
+
 ## TASK 3
-Vybral jsem tři supervised metody rozhodovací stromy, logistickou regresi a gradient boosting metodu. Výběr parametrů jsem provedl pomocí metody grid search a pomocí cross-validace. Následně jsem natrénoval modely na získaných parametrech a uložil modely.
+Vybral jsem tři supervised metody rozhodovací stromy, neuronové sítě a gradient boosting metodu. Výběr parametrů jsem provedl pomocí metody grid search a pomocí cross-validace. Následně jsem natrénoval modely na získaných parametrech a uložil modely.
 
-DecisionTree_: {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
-LogisticRegression_: {'C': 0.001, 'fit_intercept': True, 'intercept_scaling': 0.1, 'l1_ratio': 0.1, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs', 'warm_start': True}
-
+###Výsledky grid search:
+####DecisionTree_: {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+####MLPClassifier_: {'activation': 'tanh', 'alpha': 0.001, 'batch_size': 'auto', 'early_stopping': True, 'hidden_layer_sizes': (100,), 'learning_rate_init': 0.01, 'max_iter': 500, 'solver': 'adam'}
+####GradientBoosting_: {'learning_rate': 0.1, 'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100, 'subsample': 0.8}
 
 ## TASK 4
 Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomocí elbow metody, kde ze získaných intertia jsem vypočítal vzdálenost od přímky náležící počátečnímu bodu a koncovému bodu grafu. Maximální vzdálenost bodu od naší přímky je náš elbow bod.
