@@ -12,4 +12,6 @@ Vybral jsem tři supervised metody rozhodovací stromy, logistickou regresi a na
 
 ## TASK 4
 Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomocí elbow metody, kde ze získaných intertia jsem vypočítal vzdálenost od přímky náležící počátečnímu bodu a koncovému bodu grafu. Maximální vzdálenost od bodu je náš elbow bod. Vzorec pro vzdálenost je:
-\[d = \frac{|(WSS[-1] - WSS[0]) \cdot (i+1) + (1 - n) \cdot WSS[i] + (n \cdot WSS[0] - WSS[-1])|}{\sqrt{(WSS[-1] - WSS[0])^2 + (1 - n)^2}}\]
+d = |(WSS[-1] - WSS[0]) * (i+1) + (1 - n) * WSS[i] + (n * WSS[0] - WSS[-1])| 
+    / sqrt((WSS[-1] - WSS[0])^2 + (1 - n)^2)
+
