@@ -22,7 +22,7 @@ Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomoc
 
 ## TASK 5
 Program trénuje modely, které mají nastavené parametry defaultně, pokud uživatel nechce nejleší volbu parametrů.
-Komplikkací bylo dlouhé zkoušení parametrů a čekání na výpočet grid sreach a proto jsou parametry vybrány, tak aby grid search trval rozumně dlouho.
+Komplikací bylo dlouhé zkoušení parametrů a čekání na výpočet grid sreach a proto jsou parametry vybrány, tak aby grid search trval rozumně dlouho.
 Výběr modelů byl založen na přesnosti defaultních parametrů příslušných modelů, kde právě tyto tři modely vyšli, jako nejepší. Například s porovnámín Naivního bayese nebo logistické regrese.
 Parametry pro grid search obsahují vždy defaultní hodnotu a alespoń jednu hodnotu větší a menší, jak defaultní hodnota. Byly vybrány nejduležitější parametry.
 
