@@ -3,7 +3,7 @@
 Seznamil jsem se s datasetem a využil attributy v kodu.
 
 ## TASK 2
-Byla proveden analýza a pomocí PCA jsem redukoval dimenzi, čímž jsem provedli feature selection. Vykreslený graf závislosti rozptylu na n_components je:
+Byla provedena analýza a pomocí PCA jsem redukoval dimenzi, čímž jsem provedli feature selection. Vykreslený graf závislosti rozptylu na n_components je:
 ![image](https://github.com/user-attachments/assets/a376c843-6cdd-47f2-8d75-4f989b9ab005)
 
 Optimální n_components = 4.
