@@ -1,4 +1,4 @@
-# HW3 README
+# HW3
 ## TASK 1
 Seznamil jsem se s datasetem a využil attributy v kodu.
 
