@@ -21,8 +21,9 @@ Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomoc
 ![image](https://github.com/user-attachments/assets/25ce1234-8cbe-4246-8f58-9dbb6a64df34)
 
 ## TASK 5
-Parametry modelu jsou vybrány právě pomocí grid search, jelikož jsou optimální pro naší úlohu a modely byly vybrány podle přesnosti na našich datech.
-Komplikací úlohy bylo dlouhé zkoušení parametrů a čekání na výpočet grid sreach.
+Program trénuje modely, které mají nastavené parametry defaultně, pokud uživatel nechce nejleší volbu parametrů.
+Komplikací úlohy bylo dlouhé zkoušení parametrů a čekání na výpočet grid sreach a proto jsou parametry vybrány, tak aby grid search trval rozumně dlouho.
+Výběr modelů byl založen na přesnosti defaultních parametrů příslušných modelů, kde právě tyto tři modely vyšli, jako nejepší. Například s porovnámín Naivního bayese nebo logistické regrese.
 
 ## TASK 6
 Spuštěním evaluate uživatel dostane na standartím výstupu kovarianční matici,presion a recall ve formátu:
@@ -42,6 +43,6 @@ precision: 0.7977634442156533
 
 recall: 0.75
 
-![image](https://github.com/user-attachments/assets/5ec2a9df-2bda-42d2-9072-7fc58f66f10b)
+![image](https://github.com/user-attachments/assets/6e9d1d9c-3630-432a-8aaf-d0731dbb01df)
 
 Uživatel také dostane výsledky modelů v presion-recall prostoru.
