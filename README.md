@@ -46,4 +46,4 @@ recall: 0.75
 
 ![image](https://github.com/user-attachments/assets/6e9d1d9c-3630-432a-8aaf-d0731dbb01df)
 
-Uživatel také dostane výsledky modelů v presion-recall prostoru.
+Uživatel také dostane výsledky modelů v presion-recall prostoru. (GRAF JE PRO DEFAULTNÍ PARAMETRY MODELŮ)
