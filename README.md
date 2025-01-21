@@ -10,6 +10,10 @@ jsem pomocí PCA dimenzi.
 ## TASK 3
 Vybral jsem tři supervised metody rozhodovací stromy, logistickou regresi a gradient boosting metodu. Výběr parametrů jsem provedl pomocí metody grid search a pomocí cross-validace. Následně jsem natrénoval modely na získaných parametrech a uložil modely.
 
+DecisionTree_: {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+LogisticRegression_: {'C': 0.001, 'fit_intercept': True, 'intercept_scaling': 0.1, 'l1_ratio': 0.1, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs', 'warm_start': True}
+
+
 ## TASK 4
 Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomocí elbow metody, kde ze získaných intertia jsem vypočítal vzdálenost od přímky náležící počátečnímu bodu a koncovému bodu grafu. Maximální vzdálenost bodu od naší přímky je náš elbow bod.
 ![image](https://github.com/user-attachments/assets/25ce1234-8cbe-4246-8f58-9dbb6a64df34)
