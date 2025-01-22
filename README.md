@@ -17,7 +17,7 @@ Vybral jsem tři supervised metody -> rozhodovací stromy, neuronové sítě a g
 #### GradientBoosting_: {'learning_rate': 0.1, 'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100, 'subsample': 0.8}
 
 ### Pokud uživatel nechce grid search:
-#### DecisionTree_: {}
+#### DecisionTree_: {'criterion': 'entropy'}
 #### MLPClassifier_: {'activation': 'tanh'}
 #### GradientBoosting_: {'max_depth': 5,'subsample': 0.8}
 
