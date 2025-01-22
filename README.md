@@ -24,7 +24,8 @@ Vybral jsem tři supervised metody -> rozhodovací stromy, neuronové sítě a g
 
 ## TASK 4
 Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomocí elbow metody, kde ze získaných intertia jsem vypočítal vzdálenost od přímky náležící počátečnímu bodu a koncovému bodu grafu. Maximální vzdálenost bodu od naší přímky je náš elbow bod.
-![image](https://github.com/user-attachments/assets/25ce1234-8cbe-4246-8f58-9dbb6a64df34)
+![image](https://github.com/user-attachments/assets/8da88855-37f0-4e17-bffb-f40383befb46)
+
 
 ## TASK 5
 Komplikací bylo dlouhé zkoušení parametrů a čekání na výpočet grid sreach a proto jsou parametry vybrány, tak aby grid search trval rozumně dlouho.
