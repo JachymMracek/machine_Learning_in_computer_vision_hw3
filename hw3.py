@@ -360,7 +360,7 @@ class ModelAnalysis(DataAnalysis):
         self._feature_processor.transform(data)
 
         if self._evaluate_on_train:
-            train_1_data,_, train_1_labels,_ = train_test_split(data.features, data.labels, test_size=0.2, random_state=self._rng)
+            train_1_data,_, train_1_labels,_ = train_test_split(data.features, data.labels, test_size=0.2, random_state=self._rng) # Použil jsem místo data.getsubset
             self.test_data = train_1_data
             self.test_labels = train_1_labels
 
