@@ -278,12 +278,12 @@ class SupervisedClassificator:
 
 class DecisionTree(SupervisedClassificator):
     def __init__(self, parameters):
-        super().__init__(parameters,DecisionTreeClassifier(),  # Funguje dobře i s defaultními parametry.
+        super().__init__(parameters,DecisionTreeClassifier(criterion='entropy'),
                         "DecisionTree_")
 
 class MLPmodel(SupervisedClassificator):
     def __init__(self, parameters):
-        super().__init__(parameters,MLPClassifier(activation="tanh"), 
+        super().__init__(parameters,MLPClassifier(activation='tanh'), 
                         "MLPClassifier_")
 
 class GradientBoostingModel(SupervisedClassificator):
