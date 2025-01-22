@@ -221,12 +221,10 @@ class ClusterAnalysis(DataAnalysis):
         for i in range(len(WSS)):
             d = abs(a*(i+1) + b* WSS[i] + c) / np.sqrt(np.square(a)+np.square(b))
             distancies.append(float(d))
-        
-        print(distancies)
 
-        elbow_index = np.argmax(distancies) + 1
+        elbow_point = np.argmax(distancies) + 1
 
-        return elbow_index
+        return elbow_point
 
     def analyze(self, train_data_path: Path):
         """Implementation of cluster analysis."""
