@@ -266,7 +266,7 @@ class SupervisedClassificator:
             # with open("parametry.txt", "a") as file:
             #      file.write(f"{self.name}: {grid.best_params_}")
 
-            #  return 
+            return 
         
         self.method.fit(train_1,train_2)
 
