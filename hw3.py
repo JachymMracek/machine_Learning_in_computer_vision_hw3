@@ -381,7 +381,7 @@ class ModelAnalysis(DataAnalysis):
         gradientBoostingModel = GradientBoostingModel(parameters_gradientBoosting)
 
         for model in [decisionTree,mlp,gradientBoostingModel]:
-            model.searching_for_best_parameters(True, train_1_data, train_1_labels)
+            model.searching_for_best_parameters(search, train_1_data, train_1_labels)
             model.save_classificator(self)
 
     def evaluate(self, data_path: Path):
@@ -389,10 +389,14 @@ class ModelAnalysis(DataAnalysis):
         # TODO: Implement your model evaluation code in this function.
         # - This is the function mentioned in the 'Task 6' of the assignment PDF.
         # - You can load models and objects saved in 'train' with 'self.load'.
-
-        data = DataStorage.fromFile(data_path)
-        data = DataStorage(features=self.test_data, labels=self.test_labels)
+        data : DataStorage = DataStorage.fromFile(data_path)
         self._feature_processor.transform(data)
+
+        if self.test_data is None:
+            data_for_evaluate = data
+        
+        else:
+            data_for_evaluate = DataStorage(features=self.test_data, labels=self.test_labels)
 
         models = ["DecisionTree__model.pkl", "MLPClassifier__model.pkl", "GradientBoosting__model.pkl"]
 
@@ -402,8 +406,8 @@ class ModelAnalysis(DataAnalysis):
             model_type_name = model_type.split("__")[0]
             model = self.load(model_type)
 
-            scores = model.predict_proba(data.features)
+            scores = model.predict_proba( data_for_evaluate.features)
 
-            printer.get_confusionMatrix_precission_recall(model_type_name, data.labels, scores)
+            printer.get_confusionMatrix_precission_recall(model_type_name,data_for_evaluate.labels,scores)
 
         printer.plot_precision_recall_space()
