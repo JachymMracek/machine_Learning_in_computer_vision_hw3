@@ -203,7 +203,7 @@ class ClusterAnalysis(DataAnalysis):
     def get_WSS(self,features):
         WSS =  []
 
-        for clusters in range(1,11):
+        for clusters in range(1,20):
 
             model =  KMeans(n_clusters=clusters, random_state=self._rng).fit(features)
 
