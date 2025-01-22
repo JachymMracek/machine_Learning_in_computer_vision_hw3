@@ -212,18 +212,17 @@ class ClusterAnalysis(DataAnalysis):
         return WSS
     
     def find_elbow(self, WSS):
-        distancies = [] 
+        distancies = []
 
-        start_point = (1, WSS[0])
-        end_point = (len(WSS), WSS[-1])
+        a = WSS[-1] - WSS[0]
+        b = - (len(WSS) - 1)
+        c = - (a + b* WSS[0])
 
         for i in range(len(WSS)):
-
-            num_up = abs((end_point[1] - start_point[1]) * (i+1) - (end_point[0] - start_point[0]) *  WSS[i] + end_point[0] * start_point[1]- end_point[1] * start_point[0])
-
-            num_down = np.sqrt(np.square(end_point[1] - start_point[1]) + np.square(end_point[0] - start_point[0]))
-
-            distancies.append(float(num_up /num_down))
+            d = abs(a*(i+1) + b* WSS[i] + c) / np.sqrt(np.square(a)+np.square(b))
+            distancies.append(float(d))
+        
+        print(distancies)
 
         elbow_index = np.argmax(distancies) + 1
 
