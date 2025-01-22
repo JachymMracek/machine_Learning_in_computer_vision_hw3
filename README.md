@@ -35,22 +35,23 @@ Parametry pro grid search obsahují vždy defaultní hodnotu a alespoń jednu ho
 ## TASK 6
 Spuštěním evaluate uživatel dostane na standartím výstupu kovarianční matici,presion a recall ve formátu:
 
-DecisionTree
+GradientBoosting
 
-|     |  0  |  1  |  2  |  3  |  4  |  5  |  6  |
-|-----|-----|-----|-----|-----|-----|-----|-----|
-| **0** | 300 |   0 |   0 |   0 |   0 |   0 |   0 |
-| **1** |   0 | 300 |   0 |   0 |   0 |   0 |   0 |
-| **2** |   0 |   0 | 300 |   0 |   0 |   0 |   0 |
-| **3** |   0 |   0 |   0 | 300 |   0 |   0 |   0 |
-| **4** |   0 |   0 |   0 |   0 | 300 |   0 |   0 |
-| **5** |   0 |   0 |   0 |   0 |   0 | 300 |   0 |
-| **6** |   0 |   0 |   0 |   0 |   0 |   0 | 300 |
+|----------------|---------|---------|---------|---------|---------|---------|---------|
+| 291     | 0       | 2       | 0       | 0       | 0       | 7       |
+| 2       | 289     | 1       | 2       | 0       | 0       | 6       |
+| 5       | 1       | 289     | 0       | 0       | 0       | 5       |
+| 0       | 3       | 0       | 297     | 0       | 0       | 0       |
+| 0       | 0       | 0       | 0       | 300     | 0       | 0       |
+| 0       | 0       | 0       | 0       | 0       | 300     | 0       |
+| 11      | 0       | 4       | 1       | 0       | 0       | 284     |
 
-precision: 1.0
 
-recall: 1.0
+precision: 0.9764063425753082
 
-![image](https://github.com/user-attachments/assets/6e9d1d9c-3630-432a-8aaf-d0731dbb01df)
+recall: 0.9761904761904762
 
-Uživatel také dostane výsledky modelů v presion-recall prostoru. (GRAF JE PRO DEFAULTNÍ PARAMETRY MODELŮ)
+![image](https://github.com/user-attachments/assets/250e1941-ff93-4d76-9d8e-551a3925509d)
+
+
+Uživatel také dostane výsledky modelů v presion-recall prostoru. ( Graf je pro grid search parametry a evaluate_on_train je true)
