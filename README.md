@@ -24,7 +24,7 @@ Vybral jsem tři supervised metody -> rozhodovací stromy, neuronové sítě a g
 
 ## TASK 4
 Použil jsem k-means metodu, kde optimální počet clusterů jsem získal pomocí elbow metody, kde ze získaných intertia jsem vypočítal vzdálenost od přímky náležící počátečnímu bodu a koncovému bodu grafu. Maximální vzdálenost bodu od naší přímky je náš elbow bod.
-Normálový tvar rovnice naší přímky je ax + by + c = 0, kde smerovy_vektor = (-b,a), kde -b = len(WSS) - 1, uprávou b = - ( len(WSS) - 1), a =  WSS[-1] - WSS[0], c = -(a*1 + b* WSS[0]).
+Normálový tvar rovnice naší přímky je ax + by + c = 0, kde smerovy_vektor = (-b,a), kde -b = len(WSS) - 1, uprávou b = - ( len(WSS) - 1), a =  WSS[-1] - WSS[0], c = -(a*(1) + b* WSS[0]).
 Kde vzdálenost od našeho bodu (x,y) je d = abs(a*x + b*y + c) / np.sqrt(np.square(a)+np.square(b))
 ![image](https://github.com/user-attachments/assets/8da88855-37f0-4e17-bffb-f40383befb46)
 
