@@ -351,8 +351,7 @@ class ModelAnalysis(DataAnalysis):
         # - You can create a subset of 'DataStorage' by calling 'data.getSubset' with an array of indices.
         # NOTE: Use 'self._feature_processor' to fit and apply feature selection/transformation.
         data = DataStorage.fromFile(data_path)
-
-        self._feature_processor = FeatureAnalysis(self._rng, self._args)
+        
         self._feature_processor.fit(data)
         self._feature_processor.transform(data)
 
